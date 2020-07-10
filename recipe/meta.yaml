@@ -1,4 +1,4 @@
-{% set version = '0.2.2' %}
+{% set version = "0.2.3" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -11,11 +11,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/sweep_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/sweep/sweep_{{ version }}.tar.gz
-  sha256: 652654bf0805f8a27ea5a3a607a1963bca9e0ee73b18bb4cd221ec6de39cab8a
+  sha256: 4ad06032a30dc4d0677bacdb84d0feb1505e7e309d4b895d0405969b2eab059c
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
 
   rpaths:
     - lib/R/lib/
@@ -55,13 +55,10 @@ test:
 about:
   home: https://github.com/business-science/sweep
   license: GPL-3
-  summary: Tidies up the forecasting modeling and prediction work flow, extends the 'broom' package
-    with 'sw_tidy', 'sw_glance', 'sw_augment', and 'sw_tidy_decomp' functions for various
-    forecasting models, and enables converting 'forecast' objects to "tidy" data frames
-    with 'sw_sweep'.
+  summary: Tidies up the forecasting modeling and prediction work flow, extends the 'broom' package with 'sw_tidy', 'sw_glance', 'sw_augment', and 'sw_tidy_decomp' functions for various forecasting models, and enables converting 'forecast' objects to "tidy" data frames with 'sw_sweep'.
   license_family: GPL3
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
