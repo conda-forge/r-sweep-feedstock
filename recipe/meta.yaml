@@ -1,4 +1,4 @@
-{% set version = "0.2.6" %}
+{% set version = "0.2.7" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/sweep_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/sweep/sweep_{{ version }}.tar.gz
-  sha256: 48adfca0cc20269337d71e9d8995a12b71e6e1d8fb12367b65b43dc8d96a5c3d
+  sha256: 1debff74b40c0d57a4ed1a39f33508acaecb84cfd1a1d7bc04d54a92dc5824e3
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
